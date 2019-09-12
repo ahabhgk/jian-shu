@@ -5,6 +5,7 @@ import {
   getInputChangeAction,
   getAddTodoItemAction,
   getDeleteTodoItemAction,
+  getTodoList,
 } from '../store/actionCreators.js'
 
 class TodoList extends React.Component {
@@ -12,6 +13,11 @@ class TodoList extends React.Component {
     super()
     this.state = store.getState()
     store.subscribe(this.handleStoreChange.bind(this))
+  }
+
+  componentDidMount() {
+    const action = getTodoList()
+    store.dispatch(action)
   }
 
   handleInputChange(e) {
