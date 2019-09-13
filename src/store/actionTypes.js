@@ -1,4 +1,3 @@
-export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE'
-export const ADD_TODO_ITEM = 'ADD_TODO_ITEM'
-export const DELETE_TODO_ITEM = 'DELETE_TODO_ITEM'
-export const INIT_LIST_ACTION = 'INIT_LIST_ACTION'
+export const INPUT_CHANGE = 'INPUT_CHANGE'
+export const ADD_TODO = 'ADD_TODO'
+export const DELETE_TODO = 'DELETE_TODO'
