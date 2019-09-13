@@ -1,14 +1,10 @@
 import React from 'react'
-import { Provider } from 'react-redux'
-import store from './store'
-import TodoList from './components/TodoList.jsx'
+import Header from './components/Header.jsx'
 
-function App() {
-  return (
-    <Provider store={store}>
-      <TodoList />
-    </Provider>
-  )
-}
+const App = () => (
+  <div>
+    <Header />
+  </div>
+)
 
 export default App
