@@ -25,6 +25,7 @@ export const Logo = styled.a.attrs({
 `
 
 export const Nav = styled.div`
+  position: relative;
   width: 960px;
   margin: 0 auto;
 `
@@ -43,7 +44,7 @@ export const NavItem = styled.a`
 `
 
 export const NavSearch = styled.input`
-  width: 190px;
+  width: ${({ focused }) => focused ? '300px' : '190px'};
   height: 38px;
   border-radius: 19px;
   border: none;
@@ -53,8 +54,58 @@ export const NavSearch = styled.input`
   outline: none;
   color: #999;
   font-size: 15px;
+  transition: .5s;
   &::placeholder {
     color: #999;
+  }
+`
+
+export const SearchInfo = styled.div`
+  width: 250px;
+  position: absolute;
+  top: 58px;
+  left: 175px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #ccc;
+`
+
+export const SearchInfoTitle = styled.div`
+  margin: 20px 12px 0;
+  font-size: 14px;
+  color: #969696;
+`
+
+export const SearchInfoSwitch = styled.button`
+  font-size: 10px;
+  float: right;
+  color: #969696;
+  border: none;
+  text-decoration: none;
+  &:hover {
+    color: #333;
+  }
+`
+
+export const SearchInfoItemWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+`
+
+export const SearchInfoItem = styled.a.attrs(({ linkTo }) => ({
+  href: linkTo,
+}))`
+  border: 1px solid #787878;
+  color: #787878;
+  margin: 6px;
+  font-size: 12px;
+  border-radius: 2px;
+  padding: 2px 4px;
+  text-decoration: none;
+  &:hover {
+    border: 1px solid #333;
+    color: #333;
   }
 `
 
